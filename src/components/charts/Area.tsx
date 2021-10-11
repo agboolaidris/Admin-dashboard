@@ -46,51 +46,58 @@ const Wrapper = styled.div`
     }
   }
 `;
-function Barchart() {
+function Areachart() {
   const data = [
     {
       name: "Jan",
-      amount: 4000,
+      amount: 400037,
     },
     {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
+      name: "Feb",
+      amount: 990032830,
     },
     {
-      name: "Page C",
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
+      name: "March",
+      amount: 79304657,
     },
     {
-      name: "Page D",
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
+      name: "April",
+      amount: 27384943,
     },
     {
-      name: "Page E",
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
+      name: "May",
+      amount: 480009204,
     },
     {
-      name: "Page F",
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
+      name: "June",
+      amount: 2737084943,
     },
     {
-      name: "Page G",
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
+      name: "July",
+      amount: 40009204,
+    },
+    {
+      name: "Aug",
+      amount: 724435492,
+    },
+    {
+      name: "Sep",
+      amount: 2050092040,
+    },
+    {
+      name: "Oct",
+      amount: 405009204,
+    },
+    {
+      name: "Nov",
+      amount: 3505009204,
+    },
+    {
+      name: "Dec",
+      amount: 4054009204,
     },
   ];
   const addK = (value, total) => {
-    const ratio = total > 0 ? value / total : 0;
     if (value < 1000) return value;
 
     return `${value / 1000}k`;
@@ -132,8 +139,8 @@ function Barchart() {
           <Area
             height={10}
             type="monotone"
-            dataKey="pv"
-            stroke="#8884d8"
+            dataKey="amount"
+            stroke="#0B3EA1"
             fill="url(#colorPv)"
           />
         </AreaChart>
@@ -147,4 +154,4 @@ function Barchart() {
   );
 }
 
-export default Barchart;
+export default Areachart;

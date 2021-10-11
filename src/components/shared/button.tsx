@@ -11,7 +11,7 @@ interface Props {
 
 const ButtonWrapper = styled.button<{
   type?: "submit";
-  style?: "primary" | "success" | "warning";
+  btnStyle?: "primary" | "success" | "warning";
 }>`
   width: 100%;
   display: flex;
@@ -27,8 +27,8 @@ const ButtonWrapper = styled.button<{
     opacity: 0.8;
     transform: scale(0.99);
   }
-  ${({ style }) =>
-    style == "primary" &&
+  ${({ btnStyle }) =>
+    btnStyle == "primary" &&
     css`
       background: #0b3ea1;
       color: #f5f5f5;
@@ -38,7 +38,7 @@ const ButtonWrapper = styled.button<{
 function Button(data: Props) {
   const { children, style, type, isloading } = data;
   return (
-    <ButtonWrapper style={style} type={type} disabled={isloading}>
+    <ButtonWrapper btnStyle={style} type={type} disabled={isloading}>
       {isloading ? <Load type="bars" /> : <span>{children}</span>}
     </ButtonWrapper>
   );

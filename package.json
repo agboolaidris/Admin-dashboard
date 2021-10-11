@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "deploy":"npm run build && git add . && git commit -am 'update' && git push heroku master",
+    "deploy": "npm run build && git add . && git commit -am 'update' && git push heroku master",
     "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@mui/material": "^5.0.0-rc.1",
+    "@mui/styled-engine-sc": "^5.0.0-rc.1",
     "@urql/exchange-graphcache": "^4.3.3",
     "formik": "^2.2.9",
     "graphql": "^15.5.3",
@@ -20,7 +22,7 @@
     "react-loading": "^2.0.3",
     "react-toastify": "^8.0.2",
     "recharts": "^2.1.2",
-    "styled-components": "^5.3.0",
+    "styled-components": "^5.3.1",
     "urql": "^2.0.4"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import Barchart from "../components/charts/bar";
+import Areachart from "../components/charts/Area";
 import PieChart from "../components/charts/pie";
 import Layout from "../layout/layout";
 import { Wrapper } from "../styles/dashboard";
@@ -8,7 +8,7 @@ export default function Home() {
     <Layout>
       <Wrapper>
         <div className="col-8">
-          <Barchart />
+          <Areachart />
         </div>
         <div className="col-4">
           <PieChart />
